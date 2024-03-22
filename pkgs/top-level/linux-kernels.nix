@@ -511,7 +511,7 @@ in {
 
     system76 = callPackage ../os-specific/linux/system76 { };
 
-    system76-acpi = callPackage ../os-specific/linux/system76-acpi { };
+    system76-acpi = if lib.versionOlder kernel.version "5.5" then callPackage ../os-specific/linux/system76-acpi { } else null;
 
     system76-power = callPackage ../os-specific/linux/system76-power { };
 

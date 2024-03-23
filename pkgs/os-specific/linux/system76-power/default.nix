@@ -2,13 +2,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "system76-power";
-  version = "1.1.25";
+  version = "1.1.26";
 
   src = fetchFromGitHub {
     owner = "pop-os";
     repo = "system76-power";
     rev = version;
-    sha256 = "sha256-h9SWuVqH3b9OT6OwC+oQ7B+X0aiqy4mV6HA9Y1WK/3M=";
+    sha256 = "sha256-Uin9cbBxNFnawHxlttbh5+oMvPYDFL3YaLWL3CCksxk=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -29,7 +29,6 @@ rustPlatform.buildRustPackage rec {
 
   meta = with lib; {
     description = "System76 Power Management";
-    mainProgram = "system76-power";
     homepage = "https://github.com/pop-os/system76-power";
     license = licenses.gpl3Plus;
     platforms = [ "i686-linux" "x86_64-linux" ];

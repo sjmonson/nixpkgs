@@ -27492,6 +27492,8 @@ with pkgs;
 
   system76-keyboard-configurator = callPackage ../applications/misc/system76-keyboard-configurator { };
 
+  system76-power = callPackage ../os-specific/linux/system76-power { };
+
   ocf-resource-agents = callPackage ../os-specific/linux/ocf-resource-agents { };
 
   open-vm-tools = callPackage ../applications/virtualization/open-vm-tools { };
